@@ -2,10 +2,10 @@
 
 ## Overview
 
-The Register Management System is a comprehensive application designed to manage inventory, sales, 
-and user authentication for retail businesses. It features a user-friendly interface for managing products, 
+The Register Management System is a comprehensive application designed to manage retail businesses' inventory, sales,
+and user authentication. It features a user-friendly interface for managing products, 
 processing transactions, and generating reports. The system is built using a modern tech stack, including 
-React for the frontend and Laravel for the backend.
+React for the front end and Laravel for the back end.
 
 ## Features
 
@@ -38,7 +38,7 @@ register-management-system/
 │ │ └── utils/
 ├── backend/
 │ ├── app/
-│ │ ├── Http/
+│ │ ├── HTTP/
 │ │ │ ├── Controllers/
 │ │ │ └── Middleware/
 │ │ ├── Models/
@@ -89,7 +89,7 @@ git clone https://github.com/Jimmyu2foru18/Register-Management-System.git
 4. Generate the application key:
 
    ```bash
-   php artisan key:generate
+   php artisan key: generate
    ```
 
 5. Run migrations:
@@ -121,25 +121,25 @@ git clone https://github.com/Jimmyu2foru18/Register-Management-System.git
 ### Running the Application
 
 - The backend will run on `http://localhost:8000`.
-- The frontend will run on `http://localhost:3000`.
+- The front end will run on `http://localhost:3000`.
 
 ## API Endpoints
 
 ### Authentication
 
-- **POST** `/api/auth/login`: Log in a user.
-- **POST** `/api/auth/logout`: Log out the authenticated user.
-- **GET** `/api/auth/user`: Get the authenticated user's details.
+- **POST** `/API/auth/login`: Log in as a user.
+- **POST** `/API/auth/logout`: Log out the authenticated user.
+- **GET** `/API/auth/user`: Get the authenticated user's details.
 
 ### Products
 
-- **GET** `/api/products`: Get all products.
-- **POST** `/api/products`: Create a new product.
+- **GET** `/API/products`: Get all products.
+- **POST** `/API/products`: Create a new product.
 - **GET** `/api/products/{id}`: Get a specific product.
 - **PUT** `/api/products/{id}`: Update a specific product.
 - **DELETE** `/api/products/{id}`: Delete a specific product.
 
 ### Transactions
 
-- **POST** `/api/transactions`: Create a new transaction.
-- **GET** `/api/transactions`: Get all transactions.
+- **POST** `/API/transactions`: Create a new transaction.
+- **GET** `/API/transactions`: Get all transactions.
