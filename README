@@ -1,0 +1,145 @@
+# Register Management System
+
+## Overview
+
+The Register Management System is a comprehensive application designed to manage inventory, sales, 
+and user authentication for retail businesses. It features a user-friendly interface for managing products, 
+processing transactions, and generating reports. The system is built using a modern tech stack, including 
+React for the frontend and Laravel for the backend.
+
+## Features
+
+- User authentication with role-based access control (admin, supervisor, employee).
+- Product management (CRUD operations).
+- Transaction processing with real-time inventory updates.
+- Reporting features for sales and inventory.
+- Low stock alerts and notifications.
+- Responsive design for both desktop and mobile devices.
+
+## Technologies Used
+
+- **Frontend**: React, TypeScript, Tailwind CSS, Recharts
+- **Backend**: Laravel, PHP, MySQL
+- **Database**: MySQL
+- **State Management**: React Context API
+- **API**: RESTful API with Laravel Sanctum for authentication
+- **Build Tools**: Webpack, Babel
+
+## Project Structure
+```bash
+register-management-system/
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── services/
+│ │ ├── hooks/
+│ │ ├── context/
+│ │ └── utils/
+├── backend/
+│ ├── app/
+│ │ ├── Http/
+│ │ │ ├── Controllers/
+│ │ │ └── Middleware/
+│ │ ├── Models/
+│ │ ├── Services/
+│ │ ├── Repositories/
+│ │ └── Interfaces/
+│ ├── database/
+│ │ └── migrations/
+│ └── tests/
+└── docker/
+```
+
+## Installation
+
+### Prerequisites
+
+- PHP >= 8.0
+- Composer
+- Node.js >= 14.x
+- npm
+- MySQL
+
+### Clone the Repository
+```bash
+git clone https://github.com/Jimmyu2foru18/Register-Management-System.git
+```
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+
+   ```bash
+   cd backend
+   ```
+
+2. Install PHP dependencies:
+
+   ```bash
+   composer install
+   ```
+
+3. Set up your `.env` file:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+4. Generate the application key:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+5. Run migrations:
+
+   ```bash
+   php artisan migrate
+   ```
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+
+   ```bash
+   cd ../frontend
+   ```
+
+2. Install Node.js dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+### Running the Application
+
+- The backend will run on `http://localhost:8000`.
+- The frontend will run on `http://localhost:3000`.
+
+## API Endpoints
+
+### Authentication
+
+- **POST** `/api/auth/login`: Log in a user.
+- **POST** `/api/auth/logout`: Log out the authenticated user.
+- **GET** `/api/auth/user`: Get the authenticated user's details.
+
+### Products
+
+- **GET** `/api/products`: Get all products.
+- **POST** `/api/products`: Create a new product.
+- **GET** `/api/products/{id}`: Get a specific product.
+- **PUT** `/api/products/{id}`: Update a specific product.
+- **DELETE** `/api/products/{id}`: Delete a specific product.
+
+### Transactions
+
+- **POST** `/api/transactions`: Create a new transaction.
+- **GET** `/api/transactions`: Get all transactions.
